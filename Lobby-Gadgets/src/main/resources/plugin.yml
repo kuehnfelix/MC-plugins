@@ -1,0 +1,29 @@
+name: LobbyGadgets
+version: ${project.version}
+main: tk.fireware.lobbygadgets.Plugin
+commands:
+  warp:
+      description: Warp somewhere around the world!
+      usage: "Usage: /warp <Warp-Punkt>"
+      permission: lobby.warp
+      permission-message: "You don't have permission: <permission>"
+  updateresourcepack:
+      description: Update the resourcepack!
+      usage: "Usage: /updateresourcepack"
+      permission: lobby.updateresourcepack
+      permission-message: "You don't have permission: <permission>"
+permissions:
+  lobby.*:
+    description: gives acces to all bedwars commands
+    children:
+      lobby.warp: true
+      lobby.setwarp: true
+  lobby.warp:
+    description: allows you to use the /warp command
+    default: op
+  lobby.setwarp:
+    description: allows you to use the "/warp set" command
+    default: op
+  lobby.updateresourcepack:
+    description: allows you to use the "/updateresourcepack" command
+    default: op

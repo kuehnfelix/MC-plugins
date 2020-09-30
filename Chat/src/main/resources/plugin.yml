@@ -1,0 +1,3 @@
+name: Chat
+version: ${project.version}
+main: tk.fireware.chat.Chat

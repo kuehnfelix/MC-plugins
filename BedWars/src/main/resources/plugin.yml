@@ -1,0 +1,43 @@
+name: Bedwars
+version: ${project.version}
+main: tk.fireware.bedwars.Main
+prefix: [BedWars]
+authors: [letsFEX]
+description: Bedwars plugin!
+website: blog.fireware.tk
+
+commands:
+  build:
+    description: Set yourself to build-mode
+    usage: "Usage: /build (Player)"
+    permission: bedwars.build
+    permission-message: "You don't have permission: <permission>"
+  start:
+    description: Starts the game instantly
+    usage: "Usage: /start"
+    permission: bedwars.start
+    permission-message: "You don't have Permission: <permission>"
+  saveworld:
+    description: saves the changes made to the world
+    usage: "Usage: /saveworld"
+    permission: bedwars.saveworld
+    permission-message: "You don't have Permission: <permission>"
+permissions:
+  bedwars.*:
+    description: gives acces to all bedwars commands
+    children:
+      bedwars.build: true
+      bedwars.start: true
+      bedwars.saveworld: true
+  bedwars.build:
+    description: allows you to set players to build-mode
+    default: op
+  bedwars.start:
+    description: allows you to start games instant
+    default: op
+  bedwars.saveworld:
+    description: allows save the changes that have been made to the world
+    default: op
+  bedwars.joinfull:
+    description: allows you to join a full server
+    default: op

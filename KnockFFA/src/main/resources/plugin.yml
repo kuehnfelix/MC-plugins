@@ -1,0 +1,14 @@
+name: KnockFFA
+version: ${project.version}
+main: tk.fireware.knockffa.KnockFFA
+permissions:
+  knock.*:
+    description: Gives access to all KnockFFA commands
+    children:
+      inferno.joinfull: true
+      inferno.build: true
+  knock.joinfull:
+    description: Allows you to connect to a full KnockFFA-Server
+  knock.build:
+    description: Allows you to modify the map!
+

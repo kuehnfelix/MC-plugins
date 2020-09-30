@@ -1,0 +1,4 @@
+name: Piratebattle
+version: ${project.version}
+main: network.wolfsbau.piratebattle.Piratebattle
+api-version: 1.13

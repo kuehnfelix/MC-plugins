@@ -1,0 +1,4 @@
+name: MC-1650
+version: 1.0-SNAPSHOT
+main: network.wolfsbau.letsfex.mc1650.Main
+api-version: 1.13

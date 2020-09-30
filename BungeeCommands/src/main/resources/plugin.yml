@@ -1,0 +1,7 @@
+name: BungeeCommands
+version: ${project.version}
+main: tk.fireware.bungeecommands.BungeeCommands
+
+commands:
+  hub:
+    aliases: [l]

@@ -1,0 +1,96 @@
+name: Payback
+version: ${project.version}
+main: tk.wolfsbau.payback.Payback
+
+commands:
+  team:
+      description: Command to add/remove teams!
+      permission: "payback.team"
+      usage: "Usage: | /<command> list | /<command> add <name> <player1> <player2> ... | /<command> remove <name>"
+      permission-message: "You don't have permission: <permission>"
+  option:
+      permission: "payback.option"
+      description: Command to see/edit options!
+      usage: "Usage: | /<command> list | /<command> get <option> | /<command> set <option>"
+      permission-message: "You don't have permission: <permission>"
+  mitte:
+      description: Command to build the spawn!
+      permission: "payback.mitte"
+      usage: "Usage: | /<command> bauen"
+      permission-message: "You don't have permission: <permission>"
+  starttime:
+      permission: "payback.start"
+      description: Command to set the Starttime!
+      usage: "Usage: | /<command> set YYYY MM DD hh:mm"
+      permission-message: "You don't have permission: <permission>"
+  discord:
+        permission: "payback.discord"
+        description: Command to send Discor Bot-Messages!
+        usage: "Usage: | /<command> <message>"
+        permission-message: "You don't have permission: <permission>"
+  strike:
+    permission: "payback.strike"
+    description: Command to give playerStrikes!
+    usage: "Usage: | /<command> <Spieler> <Grund>"
+    permission-message: "You don't have permission: <permission>"
+  pregenerate:
+    permission: "payback.pregenerate"
+    description: "Command to pregenerate world. Teleports around the whole map"
+    usage: "Usage: | /<command>"
+    permission-message: "You don't have permission: <permission>"
+permissions:
+  payback.*:
+    default: op
+    description: gives acces to all Payback commands
+    children:
+      payback.team: true
+      payback.option: true
+      payback.mitte: true
+      payback.start: true
+  payback.team:
+    description: gives acces to all Payback team-commands
+    default: op
+    children:
+      payback.team.list: true
+      payback.team.add: true
+      payback.team.remove: true
+  payback.team.list:
+    description: gives acces to Payback "/team list" command
+    default: op
+  payback.team.add:
+    description: gives acces to Payback "/team add" command
+    default: op
+  payback.team.remove:
+    description: gives acces to Payback "/team remove" command
+    default: op
+  payback.option:
+    description: gives acces to all Payback option-commands
+    default: op
+    children:
+      payback.option.get: true
+      payback.option.set: true
+      payback.option.list: true
+  payback.option.get:
+    description: gives acces to Payback "/option get" command
+    default: op
+  payback.option.set:
+    description: gives acces to Payback "/option set" command
+    default: op
+  payback.option list:
+    description: gives acces to Payback "/option list" command
+    default: op
+  payback.mitte:
+    description: gives acces to Payback "/mitte bauen" command
+    default: op
+  payback.start:
+    description: gives acces to Payback "/mitte bauen" command
+    default: op
+  payback.discord:
+    default: op
+    description: gives acces to Payback "/discord" command
+  payback.strike:
+    default: op
+    description: gives acces to Payback "/strike" command
+  payback.pregenerate:
+    default: op
+    description: gives acces to Payback "/strike" command

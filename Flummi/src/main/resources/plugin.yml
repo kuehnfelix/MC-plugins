@@ -1,0 +1,3 @@
+name: Flummi
+version: ${project.version}
+main: tk.wolfsbau.flummi.Flummi

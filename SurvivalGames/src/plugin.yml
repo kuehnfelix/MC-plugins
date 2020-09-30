@@ -1,0 +1,51 @@
+name: SG
+version: 1.0
+main: tk.fireware.sg.Main
+prefix: [SG]
+authors: [ZAO77]
+description: SG plugin!
+website: blog.fireware.tk
+
+commands:
+  build:
+    description: Set yourself to build-mode
+    usage: "Usage: /build (Player)"
+    permission: sg.build
+    permission-message: "You don't have permission: <permission>"
+  start:
+    description: Starts the game instantly
+    usage: "Usage: /start"
+    permission-message: "You don't have Permission: <permission>"
+  saveworld:
+    description: saves the changes made to the world
+    usage: "Usage: /saveworld"
+    permission: sg.saveworld
+    permission-message: "You don't have Permission: <permission>"
+  countdown:
+    description: edits the countdown
+    usage: "Usage: /countdown (True/False/<Integer>)"
+    permission: sg.countdown
+    permission-message: "You don't have Permission: <permission>"
+permissions:
+  sg.*:
+    description: gives acces to all SG commands
+    children:
+      sg.build: true
+      sg.start: true
+      sg.saveworld: true
+      sg.countdown: true
+  sg.build:
+    description: allows you to set players to build-mode
+    default: op
+  sg.countdown:
+    description: allows you to edit the countdown
+    default: op
+  sg.start:
+    description: allows you to start games instant
+    default: op
+  sg.saveworld:
+    description: allows save the changes that have been made to the world
+    default: op
+  sg.joinfull:
+    description: allows you to join a full server
+    default: op
